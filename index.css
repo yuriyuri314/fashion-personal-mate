@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Jua&display=swap');
+
+@theme {
+  --font-sans: "Jua", sans-serif;
+  --font-display: "Dongle", sans-serif;
+  
+  --color-mint-50: #e6fffa;
+  --color-mint-100: #b2f2e3;
+  --color-mint-400: #81e6d9;
+  --color-mint-500: #4fd1c5;
+  
+  --color-pink-50: #fff5f7;
+  --color-pink-100: #ffd1dc;
+  --color-pink-400: #f687b3;
+  --color-pink-500: #ed64a6;
+}
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-[#E6FFFA] to-[#FFF5F7] min-h-screen text-slate-800 font-sans antialiased;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.glass-panel {
+  @apply bg-white/60 backdrop-blur-[12px] border border-white/40 rounded-[24px] shadow-sm;
+}
+
+.pill-button {
+  @apply rounded-full px-6 py-3 font-medium transition-all duration-200 cursor-pointer active:scale-95 hover:shadow-sm hover:-translate-y-[1px];
+}
+
+.card {
+  @apply bg-white/60 backdrop-blur-[12px] border border-white/40 rounded-[24px] shadow-sm p-6;
+}
+
+.tab-active {
+  @apply bg-mint-100 text-slate-700 font-bold;
+}
+
+.text-accent {
+  @apply text-pink-400;
+}
